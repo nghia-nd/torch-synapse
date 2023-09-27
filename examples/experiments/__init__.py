@@ -1,0 +1,3 @@
+from .continual_learning import train_model_continual
+from .joint_learning import train_model_joint
+from .sequential_learning import train_model_sequential
