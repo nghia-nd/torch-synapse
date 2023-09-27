@@ -162,6 +162,7 @@ def main():
     args = parser.parse_args()
 
     model = ContinualModel(args.model, embedding_dim=512)
+    model.to('cuda' if torch.cuda.is_available() else 'cpu')
     optimizer = optim.SGD(model.parameters(), lr=args.lr)
     task_dict = DATASET_TO_TASK_DICT_INIT[args.dataset](args.dataset_dir)
     train_fn = TRAINING_TYPE_TO_TRAIN_FN[args.training_type]
