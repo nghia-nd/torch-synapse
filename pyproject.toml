@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "synapse"
+version = "0.1.0"
+description = "A Python library to extend image classification model capabilities for continual learning"
+authors = ["nghia-nd <20nghia.nd@vinuni.edu.vn>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+numpy = "^1.25.2"
+
+[tool.poetry.group.dev.dependencies]
+tqdm = "^4.66.1"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
